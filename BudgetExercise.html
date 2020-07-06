@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <meta  charset="UTF_8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <head>
+        <link rel="stylesheet" href="css/Exercise.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            var totalBudget=0; 
+            var totalExpense=0;
+            
+            var amount=0;
+            function addBudget(){
+                var txt=parseInt(document.getElementById("budget").value);
+                totalBudget+=txt;
+                document.getElementById("dede").innerHTML="$"+totalBudget;
+               balance();
+            }
+               
+            function balance(){
+                var amount=totalBudget-totalExpense;
+                document.getElementById("dudu").innerHTML="$"+amount;
+            }  
+                      
+                      
+            function expenseAmt(){
+               
+                var txt=document.getElementById("expense").value;
+                document.getElementById("ex").innerHTML+=txt+"<br>";
+               var amt=parseInt(document.getElementById("expenseAmt").value);
+                totalExpense+=amt;
+                document.getElementById("demo").innerHTML="$"+totalExpense;
+                
+                 var ex=document.getElementById("expenseAmt").value;
+                 document.getElementById("dodo").innerHTML+="$"+ex+"<br> ";
+                 balance();
+            }
+
+        
+        
+        
+</script>
+    </head><body>
+        <h1>BUDGET APP</h1>
+      
+        <div class="grid-container">
+            <div class="grid-item">
+                    
+        
+            <fieldset class="aa">
+                 
+                <label for="budget">Please Enter Your Budget</label>
+                <br><br>
+                <input type="text" id="budget" name="budget"><br><br>
+                <button type="button"color="green" onclick="addBudget()">Calculate</button>
+           
+            </fieldset>
+        
+
+    </div>
+
+<div class="grid-item">
+    
+    
+       <h1>BUDGET</h1>
+       <i class="fa fa-money" aria-hidden="true" style="font-size: 50px;"></i>
+        <p id="dede"></p>
+
+
+    
+</div> 
+<div class="grid-item">
+    <h1>EXPENSES</h1><br>
+    <i class="fa fa-credit-card" style="font-size:36px"></i>
+    <p id="demo"></p>
+
+</div>
+<div class="grid-item">
+    <h1>BALANCE</h1><br>
+    <i class="fa fa-dollar" style="font-size:50px"></i>
+    <p id="dudu"></p>
+
+</div>
+
+<div class="grid-item">
+           
+    <fieldset class="bb">
+                 
+        <label for="expense">Please Enter Your Expense</label>
+        <br><br>
+        <input type="text" id="expense" name="expense"><br><br>
+        <label for="expenseamt"><b>Please Enter Expense Amount</b></label>
+        <br><br>
+        <input type="text" id="expenseAmt" name="expenseAmt"><br><br>
+        <button type="button" color="pink" onclick="expenseAmt()">Add Expense</button>
+   
+    </fieldset>
+   
+
+</div>
+
+
+  <div class="grid-item">
+    <h2>Expense Title</h2>
+    <p id="ex"></p>
+  </div>     
+  <div class="grid-item">
+    <h2>Expense Value</h2>
+    
+    <p id="dodo"></p>
+    
+        
+    
+   
+</div>
+ <div class="grid-term"> <br>
+<i class="fa fa-edit" style="font-size:24px"></i>
+<i class="fa fa-trash-o" style="font-size:24px"></i>
+</div>   
+
+</div> 
+</body>
+ </html>
