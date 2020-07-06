@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta  charset="UTF_8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <head>
+      <script>
+          
+          function divideEven(){
+            var start=parseInt(document.getElementById("txt1").value);
+            var end=parseInt(document.getElementById("txt2").value);
+            for(var i=start;i<=end;i++){
+                if(i%2==0)
+                document.getElementById("even").innerHTML+=i+"<br>";
+                else
+                document.getElementById("odd").innerHTML+=i+"<br>";
+            }
+          }
+         
+      </script>
+    </head>
+    <body>
+        Start Number:<input type="text" id="txt1" name="txt1"><br>
+        End Number:<input type="text" id="txt2" name="txt2"><br>
+        <button type="submit" onclick="divideEven()">Odd or Even</button>
+       <h5>The odd numbers are:</h5>
+        <p id="odd"></p>
+        <h5>The even numbers are:</h5>
+        <p id="even"></p>
+    </body>
+ </html>   
