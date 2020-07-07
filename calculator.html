@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta  charset="UTF_8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <head>
+      <script>
+          function calculate() {
+            var operator= prompt("Enter your operator", "*");
+            var result;
+            var first=parseInt(document.getElementById("txt1").value);
+            var second=parseInt(document.getElementById("txt2").value);
+           
+            switch(operator) {
+                case "+":
+                result=first+second;
+                
+            break;
+                case "-":
+                result=first-second;
+    
+            break;
+                case "*":
+                result=first*second;
+                
+            break;
+            default:
+                result=first/second;
+            }      
+        document.getElementById("demo").innerHTML=result;
+          
+          }     
+      </script>
+    </head>
+    <body>
+        Enter first number:<input type="text" name="txt1" id="txt1"><br>
+        Enter second number:<input type="text" name="txt2" id="txt2"><br>
+        <button type="button" onclick="calculate();">Calculate</button>
+        <p id="demo"></p>
+    </body>
+    </html>
