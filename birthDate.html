@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta  charset="UTF_8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <head>
+      <script>
+          function calcBirthday(){
+              
+              var date=new Date(document.getElementById("txt").value);
+              var birthday=date.getFullYear();
+              var d=new Date();
+              var birth=d.getFullYear();
+              var result=birth-birthday;
+              if(result<18){
+              document.getElementById("demo").innerHTML="Your age is under 18.";
+              }
+              else{
+              document.getElementById("demo").innerHTML="Your age is over 18,";
+              }
+              
+          }
+      </script>
+    </head>
+    <body>
+        Enter birth date:<input type="text" name="txt" id="txt"><br>
+        <button type="submit" onclick="calcBirthday();">Calculate Birth Date</button><br>
+        
+        <p id="demo"></p>
+    </body>
+</html>
