@@ -1,0 +1,17 @@
+.std{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .std td, .std th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+   .std th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  

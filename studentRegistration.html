@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta  charset="UTF_8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="student.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function save(){
+                var name=document.getElementById("txt1").value;
+                var ph=document.getElementById("txt2").value;
+                var email=document.getElementById("txt3").value;
+                var roll_no=document.getElementById("txt4").value;
+                var address=document.getElementById("txt5").value;
+               var gen=document.getElementsByName("gender");
+               for (var i = 0;i<gen.length; i++) {
+                     if (gen[i].checked) {
+                          var gender=gen[i].value;
+                          
+                     }
+               }
+               var major="";
+                var inputElements = document.getElementsByName("major");
+                for(var i=0; i<inputElements.length; ++i){
+                 if(inputElements[i].checked){
+                     major+=inputElements[i].value+",";
+           
+                    }
+                }
+               $("#showInfo tbody").append("<tr><td>"+name+"</td><td>"+ph+"</td><td>"+email+"</td><td>"+roll_no+"</td><td>"+address+"</td><td>"+gender+"</td><td>"+major+"</td></tr>");
+               }  
+           
+        </script>
+    </head>
+    <body>
+        <form>
+        <input type="text" name="txt1" id="txt1" placeholder="Enter name"><br><br>
+        <input type="text" name="txt2" id="txt2" placeholder="Enter phone"><br><br>
+        <input type="text" name="txt3" id="txt3" placeholder="Enter email"><br><br>
+        <input type="text" name="txt4" id="txt4" placeholder="Enter roll-no"><br><br>
+        <textarea name="txt5" id="txt5" placeholder="Enter address"></textarea><br><br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br><br>
+        <label for="major">Major</label>
+        <input type="checkbox" name="major" value="501">
+        <label for="sub1"> 501</label>
+        <input type="checkbox" name="major" value="502">
+        <label for="sub2"> 502</label>
+        <input type="checkbox" name="major" value="503">
+        <label for="sub3"> 503</label><br><br>
+        <button type="button" onclick="save();">Save</button>
+        </form>
+        <br><br>
+        <table id="showInfo" class="std">
+        <thead>
+        <tr><th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Roll_no</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Major</th></tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        </table>
+        </body>
+</html>
